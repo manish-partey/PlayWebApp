@@ -3,9 +3,21 @@
 @{
     ViewData["Title"] = "List";
 }
+<div class="container">
 
-<h1>Depatment List</h1>
+    <h1>Depatment List</h1>
+    <h2>@Model.strMessage</h2>
+
+    @foreach (var dept in Model.departments)
+    {
+        <div class="row">
+            <div class="col-3">@dept.DeptID</div>
+            <div class="col-3">@dept.DeptName</div>
+            <div class="col-3">@dept.DeptHead</div>
+            <div class="col-3">@dept.DeptName</div>
+        </div>
+    }
 
 
-<h2>@Model.strMessage</h2>
 
+</div>
