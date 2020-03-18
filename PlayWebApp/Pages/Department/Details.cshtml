@@ -1,0 +1,20 @@
+﻿@page "{strDeptID:int}"
+
+@model PlayWebApp.Pages.Department.DetailsModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container">
+    <h1>@Model.Dept.DeptName</h1>
+    <div class="row">
+        ID :  @Model.Dept.DeptID
+    </div>
+    <div class="row">
+        Department :  @Model.Dept.deptartment
+    </div>
+    <div class="row">
+        Head :  @Model.Dept.DeptHead
+    </div>
+    <a asp-page="./List" class="btn btn-link">All Department</a>
+</div>
