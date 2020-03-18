@@ -4,10 +4,20 @@
     ViewData["Title"] = "List";
 }
 <div class="container">
-
-    <h1>Depatment List</h1>
-    <h2>@Model.strMessage</h2>
-
+    <form method="get">
+<div class="form-group">
+    <div class="input-group">
+        <input type="search"  class="form-control" value=""/>
+        
+        <span class="input-group-btn">
+            <button class="btn btn-group-lg btn-info" value="Search">
+                
+            </button>
+        </span>
+    </div>
+    </div>
+</form>
+    
     @foreach (var dept in Model.departments)
     {
         <div class="row">
@@ -17,7 +27,4 @@
             <div class="col-3">@dept.DeptName</div>
         </div>
     }
-
-
-
 </div>
