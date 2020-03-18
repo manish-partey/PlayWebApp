@@ -18,9 +18,15 @@ namespace PlayWebApp.Pages.Department
         {
             this.department = department;
         }
-        public void OnGet(int strDeptID)
+        public IActionResult OnGet(int strDeptID)
         {
+
             Dept = department.GetDeptByID(strDeptID);
+            if (Dept == null)
+            {
+                return RedirectToPage("./NotFound");
+            }
+            return Page();
         }
     }
 }
