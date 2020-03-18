@@ -10,6 +10,7 @@ namespace DAL.Core
 	public interface IDepartment
 	{
 		IEnumerable<Dept> GetAll();
+		IEnumerable<Dept> GetDeptByName(string strDept);
 	}
 
 	public class GetDepartment : IDepartment
@@ -30,6 +31,14 @@ namespace DAL.Core
 		public IEnumerable<Dept> GetAll()
 		{
 			return from d in Depts
+				   orderby d.DeptID
+				   select d;
+		}
+
+		public IEnumerable<Dept> GetDeptByName(string strDept = null)
+		{
+			return from d in Depts
+				   where string.IsNullOrEmpty(strDept) || d.DeptName.StartsWith(strDept)
 				   orderby d.DeptID
 				   select d;
 		}

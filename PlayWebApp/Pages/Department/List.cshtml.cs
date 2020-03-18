@@ -17,7 +17,8 @@ namespace PlayWebApp.Pages.Department
         public string strMessage { get; set; }
         public IConfiguration Config { get; }
         public IEnumerable<Dept> departments { get; set; }
-
+        [BindProperty(SupportsGet=true)]
+        public string SearchValue { get; set; }
 
         public ListModel(IConfiguration config, 
             IDepartment department)
@@ -31,7 +32,7 @@ namespace PlayWebApp.Pages.Department
         {
             strMessage = "Display message using property";
             strMessage = Config["Message"];
-            departments = department.GetAll();
+            departments = department.GetDeptByName(SearchValue);
         }
     }
 }
