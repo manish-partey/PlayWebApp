@@ -1,0 +1,29 @@
+﻿@page
+@model PlayWebApp.Pages.Department.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+    <form method="post" >
+        <div class="container form-group">
+            <h1>Editing <i> @Model.department.DeptName</i> Department </h1>
+            <input type="hidden" asp-for="department.DeptID" />
+            <div class="row">
+                <div class="col-4">
+                    <label asp-for="department.DeptName" />
+                    <input asp-for="department.DeptName" />
+                </div>
+
+                <div class="col-4">
+                    <label asp-for="department.DeptHead" />
+                    <input asp-for="department.DeptHead" />
+                </div>
+                <div class="col-4">
+                    <label asp-for="department.deptartment" />
+                    <select asp-for="department.deptartment" asp-items="Model.deptList">
+
+                    </select>
+                </div>
+            </div>
+        </div>
+    </form>
+

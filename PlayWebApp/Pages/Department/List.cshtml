@@ -26,6 +26,11 @@
             <div class="col-3">@dept.DeptName</div>
             <div class="col-3">@dept.DeptHead</div>
             <div class="col-3">@dept.DeptName</div>
+            <div class="col-3">
+                <a asp-page="./Edit" class="nav nav-link" asp-route-strDeptID="@dept.DeptID">
+                   Edit
+                </a>
+            </div>
         </div>
     }
 </div>

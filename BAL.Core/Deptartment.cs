@@ -1,14 +1,13 @@
 ﻿namespace BAL.Core
 {
-	public partial class Dept
+
+	public enum Deptartment
 	{
-		public enum Deptartment {
-			Maths,
-			Science,
-			Commerce,
-			Arts,
-			HR
-		}
+		Maths,
+		Science,
+		Commerce,
+		Arts,
+		HR
 
 	}
 }

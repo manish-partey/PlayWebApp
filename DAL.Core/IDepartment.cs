@@ -23,11 +23,11 @@ namespace DAL.Core
 		{
 			Depts = new List<Dept>()
 			{
-				new Dept{DeptID=1, deptartment=Dept.Deptartment.Arts, DeptName="Arts", DeptHead="Manish"},
-				new Dept{DeptID=2, deptartment=Dept.Deptartment.Commerce, DeptName="Commerce", DeptHead="Ashish" },
-				new Dept{DeptID=3, deptartment=Dept.Deptartment.HR, DeptName="HR", DeptHead="Girish"},
-				new Dept{DeptID=4, deptartment=Dept.Deptartment.Maths, DeptName="Maths", DeptHead="Suraj"},
-				new Dept{DeptID=5, deptartment=Dept.Deptartment.Science, DeptName="Science", DeptHead="Sonu"}
+				new Dept{DeptID=1, deptartment=Deptartment.Arts, DeptName="Arts", DeptHead="Manish"},
+				new Dept{DeptID=2, deptartment=Deptartment.Commerce, DeptName="Commerce", DeptHead="Ashish" },
+				new Dept{DeptID=3, deptartment=Deptartment.HR, DeptName="HR", DeptHead="Girish"},
+				new Dept{DeptID=4, deptartment=Deptartment.Maths, DeptName="Maths", DeptHead="Suraj"},
+				new Dept{DeptID=5, deptartment=Deptartment.Science, DeptName="Science", DeptHead="Sonu"}
 			};
 		}
 		public IEnumerable<Dept> GetAll()
