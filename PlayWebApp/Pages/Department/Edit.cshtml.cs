@@ -38,7 +38,8 @@ namespace PlayWebApp.Pages.Department
         public IActionResult OnPost()
         {
             deptList = htmlHelper.GetEnumSelectList<Deptartment>();
-            department = department1.UpdateDept(department);
+            if(ModelState.IsValid)
+            { department = department1.UpdateDept(department); }
             return Page();
         }
     }

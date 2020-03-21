@@ -10,9 +10,8 @@ namespace BAL.Core
 		public int DeptID { get; set; }
 		[Required,StringLength(80)]
 		public string  DeptName { get; set; }
-		[Required,StringLength(80)]
-		public string DeptHead { get; set; }
 		[Required, StringLength(80)]
+		public string DeptHead { get; set; }
 		public Deptartment deptartment { get; set; }
 	}
 }
