@@ -12,6 +12,7 @@ namespace DAL.Core
 		IEnumerable<Dept> GetAll();
 		IEnumerable<Dept> GetDeptByName(string strDept);
 
+		Dept UpdateDept(Dept dept);
 		Dept GetDeptByID(int strDeptID);
 	}
 
@@ -48,6 +49,18 @@ namespace DAL.Core
 				   where string.IsNullOrEmpty(strDept) || d.DeptName.StartsWith(strDept)
 				   orderby d.DeptID
 				   select d;
+		}
+
+		public Dept UpdateDept(Dept Updateddept)
+		{
+			var dept = Depts.SingleOrDefault(r => r.DeptID == Updateddept.DeptID);
+			if (dept != null)
+			{
+				dept.DeptName = Updateddept.DeptName;
+				dept.DeptHead = Updateddept.DeptHead;
+				dept.deptartment = Updateddept.deptartment;
+			}
+			return dept;
 		}
 	}
 }

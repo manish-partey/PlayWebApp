@@ -18,16 +18,16 @@
     @foreach (var dept in Model.departments)
     {
         <div class="row">
-            <div class="col-3">
+            <div class="col-2">
                 <a asp-page="./Details" class="btn btn-lg" asp-route-strDeptID="@dept.DeptID">
                     @dept.DeptID
                 </a>
             </div>
-            <div class="col-3">@dept.DeptName</div>
-            <div class="col-3">@dept.DeptHead</div>
-            <div class="col-3">@dept.DeptName</div>
-            <div class="col-3">
-                <a asp-page="./Edit" class="nav nav-link" asp-route-strDeptID="@dept.DeptID">
+            <div class="col-2">@dept.DeptName</div>
+            <div class="col-2">@dept.DeptHead</div>
+            <div class="col-2">@dept.DeptName</div>
+            <div class="col-2">
+                <a asp-page="./Edit" class="btn btn-secondary" asp-route-strDeptID="@dept.DeptID">
                    Edit
                 </a>
             </div>

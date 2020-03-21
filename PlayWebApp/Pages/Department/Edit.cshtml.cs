@@ -15,6 +15,7 @@ namespace PlayWebApp.Pages.Department
         private readonly IDepartment department1;
         private readonly IHtmlHelper htmlHelper;
 
+        [BindProperty]
         public Dept department { get; set; }
         public IEnumerable<SelectListItem> deptList { get; set; }
         public EditModel(IDepartment department,
@@ -31,6 +32,13 @@ namespace PlayWebApp.Pages.Department
             {
                 return RedirectToPage("./NotFound");
             }
+            return Page();
+        }
+
+        public IActionResult OnPost()
+        {
+            deptList = htmlHelper.GetEnumSelectList<Deptartment>();
+            department = department1.UpdateDept(department);
             return Page();
         }
     }
